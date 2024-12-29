@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="dark">
+
+<head>
+    <title>RoboQuest Destiny</title>
+
+    <!-- Bootstrap5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Robo Quest Destiny JS-->
+    <script src="roboquestDestiny.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <p class="display-6">Class</p>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="guardian" name="Guardian" value="guardian" checked>
+                <label class="form-check-label">Guardian</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="commando" name="Commando" value="commando" checked>
+                <label class="form-check-label">Commando</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="ranger" name="Ranger" value="ranger" checked>
+                <label class="form-check-label">Ranger</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="recon" name="Recon" value="recon" checked>
+                <label class="form-check-label">Recon</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="engineer" name="Engineer" value="engineer" checked>
+                <label class="form-check-label">Engineer</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="elementalist" name="Elementalist" value="elementalist" checked>
+                <label class="form-check-label">Elementalist</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="superbot" name="Superbot" value="superbot" checked>
+                <label class="form-check-label">Superbot</label>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <p class="display-6">Maps</p>
+            <img class="rounded" src="https://steamuserimages-a.akamaihd.net/ugc/2229905542234698425/40B67392CC3C08B167C54AB89EDF2067184BB83D/" data-bs-toggle="modal" data-bs-target="#bigMap">
+            <div class="modal" id="bigMap">
+                <div class="modal-dialog modal-dialog-scrollable" style="max-width: max-content; max-height: max-content;">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title">World map</p>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3078101989" target="_blank"><img src="https://steamuserimages-a.akamaihd.net/ugc/2229905542234698425/40B67392CC3C08B167C54AB89EDF2067184BB83D/"></a> 
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col"></div>
+            <div class="col">
+                <p>Canyons</p>
+                <img class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/1/10/Canyons_Icon.png/revision/latest?cb=20240124211353">
+            </div>
+            <div class="col"></div>
+        <div class="row mt-4">
+            <div class="col">
+                <p>Ruins</p>
+                <img id="ruins" class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/e/ef/Ruins_Icon.png/revision/latest?cb=20240124211401" onclick="clickMap(this.id)">
+            </div>
+            <div class="col">
+                <p>Oasis</p>
+                <img id="oasis" class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/8/8e/Oasis_Icon.png/revision/latest?cb=20240124211406" onclick="clickMap(this.id)">
+            </div>
+            <div class="col">
+                <p>Quarry</p>
+                <img id="quarry" class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/6/68/Quarry_Icon.png/revision/latest?cb=20240124211411" onclick="clickMap(this.id)">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <p>Scrapyard</p>
+                <img id="scrapyard" class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/9/9a/Scrapyard_Icon.png/revision/latest?cb=20240124211416" onclick="clickMap(this.id)">
+            </div>
+            <div class="col">
+                <p>The Rift</p>
+                <img id="theRift" class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/8/8b/The_Rift_Icon.png/revision/latest?cb=20240124211421" onclick="clickMap(this.id)">
+            </div>
+            <div class="col">
+                <p>The Pit</p>
+                <img id="thePit" class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/e/e1/The_Pit_Icon.png/revision/latest?cb=20240124211426" onclick="clickMap(this.id)">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <p>Fields</p>
+                <img id="fields" class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/0/0b/Fields_Icon.png/revision/latest?cb=20240124211431" onclick="clickMap(this.id)">
+            </div>
+            <div class="col">
+                <p>Doom Gardens</p>
+                <img id="doomGardens" class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/b/b5/Doom_Gardens_Icon.png/revision/latest?cb=20240124211435" onclick="clickMap(this.id)">
+            </div>
+            <div class="col">
+                <p>Aqua Station</p>
+                <img id="aquaStation" class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/e/ef/Aqua_Station_Icon.png/revision/latest?cb=20240124211439" onclick="clickMap(this.id)">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <p>Energy Center</p>
+                <img id="energyCenter" class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/7/7d/Energy_Center_Icon.png/revision/latest?cb=20240124211444" onclick="clickMap(this.id)">
+            </div>
+            <div class="col">
+                <p>Waste Station</p>
+                <img id="wasteStation" class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/e/e6/Waste_Station_Icon.png/revision/latest?cb=20240124211449" onclick="clickMap(this.id)">
+            </div>
+            <div class="col">
+                <p>Fusion Core</p>
+                <img id="fusionCore" class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/7/79/Fusion_Core_Icon.png/revision/latest?cb=20240124211454" onclick="clickMap(this.id)">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col"></div>
+            <div class="col">
+                <p>Haven City</p>
+                <img class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/f/fc/Haven_City_Icon.png/revision/latest?cb=20240124211458">
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row mt-4">
+            <div class="col"></div>
+            <div class="col">
+                <p>District XIII</p>
+                <img class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/6/6b/District_XIII_Icon.png/revision/latest?cb=20240124211503">
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row mt-4">
+            <div class="col"></div>
+            <div class="col">
+                <p>The Moon</p>
+                <img class="rounded border border-5 border-success" src="https://static.wikia.nocookie.net/roboquest/images/b/b7/The_Moon_Icon.png/revision/latest?cb=20240124211507">
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</body>
+
+</html>
